@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let f: Vec<String> = fs::read_to_string("resources/day2.input")
+    let f: Vec<String> = fs::read_to_string("../resources/day2.input")
         .unwrap()
         .trim_end_matches("\n")
         .split("\n")
