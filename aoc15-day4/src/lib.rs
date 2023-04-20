@@ -9,10 +9,11 @@ pub fn md5_secret(s: String) -> String {
             break;
         }
         let s = s.to_string() + &x.to_string();
-        let digest = md5::compute(&s);
-        println!("{:?}", &s);
-        println!("{:?}", digest);
-        x += 1;
+        if let digest = md5::compute(&s) {
+            println!("{:?}", &s);
+            println!("{:?}", digest);
+            x += 1;
+        }
     }
 
     println!("{:?}", digest);
